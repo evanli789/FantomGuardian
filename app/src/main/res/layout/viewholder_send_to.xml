@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+    <TextView
+        android:id="@+id/tv_recipient_number"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="1."
+        android:textColor="@color/white"
+        android:fontFamily="@font/poppins_regular"
+        app:layout_constraintBottom_toBottomOf="@+id/til_send_to_address"
+        app:layout_constraintEnd_toStartOf="@+id/til_send_to_address"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/til_send_to_address" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_send_to_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Recipient Address"
+        android:textColorHint="@color/default_text_color"
+        app:boxBackgroundColor="@color/background_secondary_color"
+        app:boxStrokeWidth="1.5dp"
+        app:endIconDrawable="@drawable/ic_black_scan"
+        app:endIconMode="custom"
+        app:endIconTint="@color/default_text_color"
+        android:fontFamily="@font/poppins_regular"
+        app:hintTextColor="@color/purple_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_send_to_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textColorHint="@color/purple_200"
+            android:textCursorDrawable="@drawable/custom_cursor" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_amount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_marginEnd="16dp"
+        android:hint="@string/amount_ftm"
+        android:textColorHint="@color/default_text_color"
+        app:boxBackgroundColor="@color/background_secondary_color"
+        app:boxStrokeWidth="1.5dp"
+        app:hintTextColor="@color/purple_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/til_send_to_address"
+        app:layout_constraintTop_toBottomOf="@+id/til_send_to_address">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_amount_ftm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:fontFamily="@font/poppins_regular"
+            android:inputType="numberDecimal"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textCursorDrawable="@drawable/custom_cursor" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_marginEnd="16dp"
+        android:hint="Comments"
+        android:textColorHint="@color/default_text_color"
+        app:boxBackgroundColor="@color/background_secondary_color"
+        app:boxStrokeWidth="1.5dp"
+        app:hintTextColor="@color/purple_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/til_send_to_address"
+        app:layout_constraintTop_toBottomOf="@+id/til_amount">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_comments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textCursorDrawable="@drawable/custom_cursor" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Fantom Guardian</string>
+    <string name="no_wallet_added">Must add Fantom wallet before creating</string>
+    <string name="no_reset_duration_selected">Select a reset duration</string>
+    <string name="add_with_mnemonic">Enter your recovery phrase</string>
+    <string name="failed_get_contract_info">Failed to get contract info</string>
+    <string name="failed_delete_switch">Failed to delete switch</string>
+    <string name="no_wallet_added_claim">Must add wallet to withdraw funds</string>
+    <string name="view_on_fantom_explorer">View on Fantom Explorer</string>
+    <string name="success_reset_switch">Successfully Reset</string>
+    <string name="decryption_phrase_added">Decryption phrase added</string>
+    <string name="unexpected_error">Unexpected error</string>
+    <string name="failed_reset_switch">Failed to reset switch</string>
+    <string name="enter_decryption_phrase">Enter decryption phrase</string>
+    <string name="withdrawing_ftm">Withdrawing FTM...</string>
+    <string name="amount_ftm">Amount FTM</string>
+</resources>
