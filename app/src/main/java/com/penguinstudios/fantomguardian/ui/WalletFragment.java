@@ -28,6 +28,7 @@ import com.penguinstudios.fantomguardian.R;
 import com.penguinstudios.fantomguardian.adapters.ContractsAdapter;
 import com.penguinstudios.fantomguardian.data.model.Network;
 import com.penguinstudios.fantomguardian.util.Constants;
+import com.penguinstudios.fantomguardian.util.KeyboardUtils;
 import com.penguinstudios.fantomguardian.viewmodel.SharedViewModel;
 import com.penguinstudios.fantomguardian.viewmodel.WalletViewModel;
 import com.google.android.material.textfield.TextInputEditText;
@@ -146,6 +147,7 @@ public class WalletFragment extends Fragment implements
 
                 case SUCCESS_ADD_WALLET:
                     sharedViewModel.newWalletAddedGetWithdrawals();
+                    KeyboardUtils.hideKeyboard(etPrivateKey);
                     break;
 
                 case PROGRESS_ADD_WALLET:

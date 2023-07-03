@@ -122,6 +122,7 @@ public class WithdrawViewModel extends ViewModel {
             }
 
             BigInteger userAmount = withdrawStatus.component2();
+
             if (!(userAmount.compareTo(BigInteger.ZERO) > 0)) {
                 throw new IllegalStateException("User has empty balance");
             }

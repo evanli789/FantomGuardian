@@ -22,6 +22,7 @@ import com.penguinstudios.fantomguardian.R;
 import com.penguinstudios.fantomguardian.adapters.WithdrawnFundsAdapter;
 import com.penguinstudios.fantomguardian.data.model.SuccessfulWithdrawal;
 import com.penguinstudios.fantomguardian.util.Constants;
+import com.penguinstudios.fantomguardian.util.KeyboardUtils;
 import com.penguinstudios.fantomguardian.viewmodel.SharedViewModel;
 import com.penguinstudios.fantomguardian.viewmodel.WithdrawViewModel;
 import com.google.android.material.textfield.TextInputEditText;
@@ -105,6 +106,7 @@ public class WithdrawFragment extends Fragment implements WithdrawnFundsAdapter.
                     resetEnterDecryptionPhraseBtn();
 
                     viewModel.getWithdrawals();
+                    KeyboardUtils.hideKeyboard(etContractAddress);
                     break;
 
                 case PROGRESS_WITHDRAW:

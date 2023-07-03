@@ -4,6 +4,7 @@ import com.penguinstudios.fantomguardian.contract.DeadMansSwitch;
 import com.penguinstudios.fantomguardian.data.model.Network;
 import com.penguinstudios.fantomguardian.data.model.ResetDuration;
 import com.penguinstudios.fantomguardian.data.model.SendToRecipient;
+import com.penguinstudios.fantomguardian.util.CustomGasProvider;
 import com.penguinstudios.fantomguardian.util.EncryptionUtil;
 
 import org.web3j.protocol.Web3j;
@@ -64,7 +65,7 @@ public class RemoteRepository {
             recipientComments.add(encryptedComment);
         }
 
-        return DeadMansSwitch.deploy(web3j, createTxManager(), new DefaultGasProvider(),
+        return DeadMansSwitch.deploy(web3j, createTxManager(), new CustomGasProvider(),
                 totalAmountToSend, BigInteger.valueOf(resetDuration.getNumDays()),
                 recipientAddresses, amountPerRecipient, recipientComments).send();
     }
@@ -76,12 +77,12 @@ public class RemoteRepository {
 
     public TransactionReceipt resetSwitch(String contractAddress) throws Exception {
         return DeadMansSwitch.load(contractAddress, web3j, createTxManager(),
-                new DefaultGasProvider()).resetSwitch().send();
+                new CustomGasProvider()).resetSwitch().send();
     }
 
     public TransactionReceipt deleteSwitch(String contractAddress) throws Exception {
         return DeadMansSwitch.load(contractAddress, web3j, createTxManager(),
-                new DefaultGasProvider()).deleteSwitch().send();
+                new CustomGasProvider()).deleteSwitch().send();
     }
 
     //Tuple3: List of each -- Recipient Wallet Address, Amount each recipient receives, Comments
@@ -103,7 +104,7 @@ public class RemoteRepository {
     //Payable function so it accepts a param BigInteger. Since we are not sending any tokens to contract to it, set it as 0
     public TransactionReceipt withdraw(String contractAddress) throws Exception {
         return DeadMansSwitch.load(contractAddress, web3j, createTxManager(),
-                new DefaultGasProvider()).withdraw(BigInteger.ZERO).send();
+                new CustomGasProvider()).withdraw(BigInteger.ZERO).send();
     }
 
     public BigInteger getDateExpiration(String contractAddress) throws Exception {

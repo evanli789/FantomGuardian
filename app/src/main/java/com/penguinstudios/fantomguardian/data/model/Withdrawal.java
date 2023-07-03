@@ -141,17 +141,4 @@ public class Withdrawal {
     public void setDecryptionPhrase(String decryptionPhrase) {
         this.decryptionPhrase = decryptionPhrase;
     }
-
-    @Override
-    public String toString() {
-        return "Withdrawal{" +
-                "id=" + id +
-                ", ownerAddress='" + ownerAddress + '\'' +
-                ", contractAddress='" + contractAddress + '\'' +
-                ", dateWithdrawn=" + dateWithdrawn +
-                ", amount=" + amount +
-                ", encryptedComments='" + encryptedComments + '\'' +
-                ", decryptionPhrase='" + decryptionPhrase + '\'' +
-                '}';
-    }
 }
